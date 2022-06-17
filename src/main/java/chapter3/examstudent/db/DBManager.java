@@ -17,6 +17,7 @@ public class DBManager {
         students.add(new Student(++id, "Fidel", "Castro", 58, null));
         students.add(new Student(++id, "Chan", "Kaishi", 38, null));
         students.add(new Student(++id, "Toetomi", "Khideosi", 65, null));
+        students.add(new Student(++id, "Boris", "Johnson", 23, null));
     }
 
     public ArrayList<Student> getStudents() {

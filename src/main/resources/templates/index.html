@@ -14,22 +14,14 @@
         </thead>
         <tbody>
         <div th:each="student : ${students}">
-            <tr th:if="${student.mark.equals('F')}">
-                <td th:text="${student.id}" class="text-danger"></td>
-                <td th:text="${student.name}" class="text-danger"></td>
-                <td th:text="${student.surname}" class="text-danger"></td>
-                <td th:text="${student.exam}" class="text-danger"></td>
-                <td th:text="${student.mark}" class="text-danger"></td>
-            </tr>
-            <tr th:unless="${student.mark.equals('F')}">
-                <td th:text="${student.id}"></td>
-                <td th:text="${student.name}"></td>
-                <td th:text="${student.surname}"></td>
-                <td th:text="${student.exam}"></td>
-                <td th:text="${student.mark}"></td>
+            <tr>
+                <td th:text="${student.id}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
+                <td th:text="${student.name}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
+                <td th:text="${student.surname}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
+                <td th:text="${student.exam}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
+                <td th:text="${student.mark}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
             </tr>
         </div>
-
         </tbody>
     </table>
 </div>
