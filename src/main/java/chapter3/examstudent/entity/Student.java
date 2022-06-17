@@ -59,7 +59,11 @@ public class Student {
     }
 
     public int getExam() {
-        return exam;
+        if (exam < 0) {
+            return 0;
+        } else {
+            return exam;
+        }
     }
 
     public void setExam(int exam) {

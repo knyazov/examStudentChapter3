@@ -2,7 +2,7 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="/layout/main.html">
 <div layout:fragment="productsContent">
-    <table class="table table-striped">
+    <table class="table">
         <thead>
         <tr>
             <th>ID</th>
@@ -12,14 +12,14 @@
             <th>MARK</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="table-group-divider">
         <div th:each="student : ${students}">
-            <tr>
-                <td th:text="${student.id}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
-                <td th:text="${student.name}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
-                <td th:text="${student.surname}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
-                <td th:text="${student.exam}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
-                <td th:text="${student.mark}" class="" th:classappend="${student.mark.equals('F')} ?'text-danger'"></td>
+            <tr class="" th:classappend="${student.mark.equals('F')} ?'table-danger'">
+                <td th:text="${student.id}"></td>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.surname}"></td>
+                <td th:text="${student.exam}"></td>
+                <td th:text="${student.mark}"></td>
             </tr>
         </div>
         </tbody>
